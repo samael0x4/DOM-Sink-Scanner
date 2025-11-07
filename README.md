@@ -1,24 +1,50 @@
-# DOM Sink Scanner
+# DOM Sink Scanner 
+Advanced DOM-based XSS sink scanner with severity scoring, payload injection, and JS beautification.
 
-Small CLI scanner that finds DOM sinks in JavaScript files and can perform simple reflected injection checks.  
-Features: sink detection, sink frequency summary, optional live payload injection.
+## 🚀 Features
 
-**Quick features**
-- Detects sinks like `eval`, `innerHTML`, `document.write`, etc.
-- Counts frequency of each sink and prints a summary.
-- `--inject` performs basic GET-based reflected injection checks (see note).
-- `--beautify` saves & attempts to beautify inline/.js scripts for inspection.
-- Outputs: plain text and structured JSON.
+- Sink severity scoring (HIGH / MEDIUM / LOW)
+- Color-coded output (like Nuclei)
+- `--inject` flag → auto-generate payload test wrappers
+- `--beauty` flag → beautify JS before scanning
+- Sink frequency summary (`sink_stats.txt`)
+- Output format selection: `.txt` or `.json`
+---
 
-**Required**
-bash, curl, grep, awk, sed, python3
-Optional (better beautify): js-beautify (npm) or pip install jsbeautifier
+## 📦 Requirements
+- `js-beautify` (for `--beauty` flag)
+```
+  pip install jsbeautifier
+```
 
-**Usage (JS-only input)**
+## 📥 Input
+A file containing JS URLs files:
+
+
+## 🧪 Installation &  Usage :
 ```
-./domx.sh  all_js.txt
+chmod +x domx.sh
+./domx.sh all_js.txt --inject --beauty
 ```
-with injection custom payloads and custom output dir
+
+## 📤 Output :
 ```
-./domx.sh all_js.txt --inject --payloads dom_payloads.txt --outdir my_scan
+- dom_candidates.txt or dom_candidates.json → feed into Dalfox or LOXS
+- sink_stats.txt → frequency summary
+- injected/*.html → payload test wrappers (if --inject used)
 ```
+
+## 🧠 Next Steps :
+Feed dom_candidates.txt into:
+```
+dalfox pipe --deep-dom --custom-payload payloads/dom.txt
+python loxs.py --input dom_candidates.txt --payload payloads/dom.txt
+```
+
+## 🛠️ Coming Soon
+- Auto JS extraction from HTML
+- Sink severity ranking
+- Headless browser execution
+
+
+
