@@ -2,13 +2,13 @@
 Advanced DOM-based XSS sink scanner with severity scoring, payload injection, and JS beautification.
 
 ## Features
-✅ It scans all JS files listed in `all_js.txt`
-✅ Detects dangerous DOM sinks with severity scoring (HIGH / MEDIUM / LOW)
-✅ Beautifies JS if `--beauty` is used
-✅ Injects payload wrappers if `--inject` is used
-✅ Saves output in `.txt` or `.json` format based on your choice
-✅ Generates sink frequency stats in `sink_stats.txt`
-✅ Creates test files in `injected/` for manual validatio
+-✅ It scans all JS files listed in `all_js.txt`
+-✅ Detects dangerous DOM sinks with severity scoring (HIGH / MEDIUM / LOW)
+-✅ Beautifies JS if `--beauty` is used
+-✅ Injects payload wrappers if `--inject` is used
+-✅ Saves output in `.txt` or `.json` format based on your choice
+-✅ Generates sink frequency stats in `sink_stats.txt`
+-✅ Creates test files in `injected/` for manual validatio
 
 
 ## Requirements
