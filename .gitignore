@@ -1,0 +1,15 @@
+# Ignore injected test files
+injected/
+
+# Ignore response dumps or temp files
+responses/
+*.log
+*.tmp
+
+# Ignore Python cache (if you add scripts later)
+__pycache__/
+*.pyc
+
+# Ignore OS/system files
+.DS_Store
+Thumbs.db
