@@ -102,7 +102,7 @@ cat "$TARGETS" | while read target; do
         MEDIUM) color="\e[1;33m" ;; # Yellow
         LOW) color="\e[1;32m" ;;    # Green
       esac
-      echo -e "${color}[+] $sink → $severity severity in: $target\e[0m"
+      echo -e "${color}[+] $sink → [$severity] : $target\e[0m"
 
       # Save results
       echo "$target" >> "$TXT_OUT"
