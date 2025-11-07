@@ -17,10 +17,22 @@ Optional (better beautify): js-beautify (npm) or pip install jsbeautifier
 
 
 **Usage**
+Subdomain lists :
+```
+# create https URLs from subdomains
+awk '{ gsub(/^\\s+|\\s+$/,\"\",$0); if ($0) print "https://" $0 }' subdomain.txt | sort -u > subdomains_https.txt
+./domx.sh subdomains_https.txt --inject
+```
+URLs File Lists : ( allurls.txt)
+```
+# Make sure every line is a full URL with scheme.
+awk '{ if ($0 !~ /^https?:\/\//) print "https://" $0; else print $0 }' allurls.txt | sort -u > allurls_ready.txt
+./domx.sh allurls_ready.txt --inject
+```
 
-Basic Scan from a File with targets (one per line)
-```bash
-./domx.sh  targets.txt
+JavaScript Files Lists :  ( allJS.txt )
+```
+./domx.sh  allJS.txt
 ```
 
 Single URL, attempt injection and beautify inline JS
@@ -28,7 +40,7 @@ Single URL, attempt injection and beautify inline JS
 ./domx.sh  https://example.com --inject --beautify
 ```
 
-use custom Payloads and change output dir
+Use custom Payloads and change output dir
 ```
 ./domx.sh  targets.txt --inject --payloads mypayloads.txt --outdir my_scan
 ```
