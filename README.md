@@ -1,5 +1,3 @@
-## 🎥 Demo
-
 ![DOMX Demo](gif.gif)
 
 # DOM Sink Scanner 
