@@ -1,7 +1,7 @@
 # DOM Sink Scanner 
 Advanced DOM-based XSS sink scanner with severity scoring, payload injection, and JS beautification.
 
-## 🚀 Features
+## Features
 
 - Sink severity scoring (HIGH / MEDIUM / LOW)
 - Color-coded output (like Nuclei)
@@ -11,7 +11,7 @@ Advanced DOM-based XSS sink scanner with severity scoring, payload injection, an
 - Output format selection: `.txt` or `.json`
 ---
 
-## 📦 Requirements
+## Requirements
 - `js-beautify` (for `--beauty` flag)
 ```
   pip install jsbeautifier
@@ -21,9 +21,11 @@ Advanced DOM-based XSS sink scanner with severity scoring, payload injection, an
 A file containing JS URLs files:
 
 
-## 🧪 Installation &  Usage :
+## 🧪 Installation  &  Usage :
 ```
 chmod +x domx.sh
+```
+```
 ./domx.sh all_js.txt --inject --beauty
 ```
 
@@ -41,10 +43,3 @@ dalfox pipe --deep-dom --custom-payload payloads/dom.txt
 python loxs.py --input dom_candidates.txt --payload payloads/dom.txt
 ```
 
-## 🛠️ Coming Soon
-- Auto JS extraction from HTML
-- Sink severity ranking
-- Headless browser execution
-
-
-
