@@ -1,3 +1,7 @@
+## 🎥 Demo
+
+![DOMX Demo](gif.gif)
+
 # DOM Sink Scanner 
 Advanced DOM-based XSS sink scanner with severity scoring, payload injection, and JS beautification.
 
