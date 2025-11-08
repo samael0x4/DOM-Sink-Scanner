@@ -40,7 +40,7 @@ chmod +x domx.sh
 ```
 
 ## 🧠 Next Steps :
-Feed dom_candidates.txt into:
+Feed `dom_candidates.txt` into:
 ```
 dalfox pipe --deep-dom --custom-payload payloads/dom.txt
 python loxs.py --input dom_candidates.txt --payload payloads/dom.txt
